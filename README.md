@@ -1,7 +1,6 @@
 # Social Authenticator Demo
 
 Starter project for the Social Authenticator. The purpose of this is to implement the following Passport authentication strategies: local, LinkedIn, Facebook, Twitter, and Google.
-## Blogger
 
 ### Features
 
@@ -31,7 +30,8 @@ Optional: User can click a "Next" button at the bottom to load more
 
 `walkthrough.gif`
 (walkthrough.gif)
-https://github.com/rajivbammi/dropbox-demo/blob/master/walkthrough.gif
+!https://github.com/rajivbammi/node-social-authenticator/blob/master/walkthrough.gif
 
-![Video Walkthrough](...)
+![Video Walkthrough](...) !https://github.com/rajivbammi/node-social-authenticator/blob/master/walkthrough.gif
+
 
