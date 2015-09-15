@@ -30,8 +30,8 @@ Optional: User can click a "Next" button at the bottom to load more
 
 `walkthrough.gif`
 (walkthrough.gif)
-!https://github.com/rajivbammi/node-social-authenticator/blob/master/walkthrough.gif
+![https://github.com/rajivbammi/node-social-authenticator/blob/master/walkthrough.gif]
 
-![Video Walkthrough](...) !https://github.com/rajivbammi/node-social-authenticator/blob/master/walkthrough.gif
+![Video Walkthrough](...) https://github.com/rajivbammi/node-social-authenticator/blob/master/walkthrough.gif
 
 
