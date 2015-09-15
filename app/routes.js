@@ -194,7 +194,7 @@ module.exports = (app) => {
 
 
   app.get('/reply/:id', isLoggedIn, then(async(req, res) => {
-     console.log("inside reply get", req.params.id)
+     //console.log("inside reply get", req.params.id)
      let id = req.params.id
      let twitterClient = new Twitter({
       consumer_key: twitterConfig.consumerKey,
@@ -208,27 +208,27 @@ module.exports = (app) => {
    post['image'] = tweet.user.profile_image_url
    post['text'] = tweet.text
    post['username'] = tweet.user.name
-   console.log(post)
+   //console.log(post)
    res.render('reply.ejs', {
         post: post
       })
   }))
 
   app.post('/reply/:id', isLoggedIn, then(async(req, res) => {
+     console.log("POST,", req.body)
      let username= ''
      let id = req.params.id
     let status = req.body.reply
-    return
     let twitterClient = new Twitter({
       consumer_key: twitterConfig.consumerKey,
       consumer_secret: twitterConfig.consumerSecret,
       access_token_key: req.user.twitter.token,
       access_token_secret: req.user.twitter.secret,
     })
-
+    let [tweet] = await twitterClient.promise.get('statuses/show', {id})
     await twitterClient.promise.post('statuses/update', {
       in_reply_to_status_id: id,
-      status: '@' + username + " " + status
+      status: '@' + tweet.user.screen_name + " " + status
     })
     res.redirect('/timeline')
   }))
